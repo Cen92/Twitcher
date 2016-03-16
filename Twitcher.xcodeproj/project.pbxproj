@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA21C98994400684F78 /* AppDelegate.swift */; };
-		B6936BA51C98994400684F78 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA41C98994400684F78 /* FirstViewController.swift */; };
+		B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA41C98994400684F78 /* GamesViewController.swift */; };
 		B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA61C98994400684F78 /* SecondViewController.swift */; };
 		B6936BAA1C98994400684F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6936BA81C98994400684F78 /* Main.storyboard */; };
 		B6936BAC1C98994400684F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6936BAB1C98994400684F78 /* Assets.xcassets */; };
+		B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8F3401C999A1B0085E1D4 /* Router.swift */; };
 		DC67973D09A98DE9BE5C8BBC /* Pods_Twitcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B19B39EE11DB7DB2F3117F /* Pods_Twitcher.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		69D0FE199A167E1E2B36D42C /* Pods-Twitcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitcher/Pods-Twitcher.debug.xcconfig"; sourceTree = "<group>"; };
 		B6936B9F1C98994400684F78 /* Twitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6936BA21C98994400684F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6936BA41C98994400684F78 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B6936BA41C98994400684F78 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		B6936BA61C98994400684F78 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B6936BA91C98994400684F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6936BAB1C98994400684F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6936BAD1C98994400684F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B8F3401C999A1B0085E1D4 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		F4F7769F139579AAE19FA176 /* Pods-Twitcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitcher/Pods-Twitcher.release.xcconfig"; sourceTree = "<group>"; };
 		F8B19B39EE11DB7DB2F3117F /* Pods_Twitcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,13 +81,54 @@
 			isa = PBXGroup;
 			children = (
 				B6936BA21C98994400684F78 /* AppDelegate.swift */,
-				B6936BA41C98994400684F78 /* FirstViewController.swift */,
-				B6936BA61C98994400684F78 /* SecondViewController.swift */,
-				B6936BA81C98994400684F78 /* Main.storyboard */,
+				B6B8F33E1C9999F20085E1D4 /* Views */,
+				B6B8F33F1C999A040085E1D4 /* Data */,
 				B6936BAB1C98994400684F78 /* Assets.xcassets */,
 				B6936BAD1C98994400684F78 /* Info.plist */,
 			);
 			path = Twitcher;
+			sourceTree = "<group>";
+		};
+		B6B8F33E1C9999F20085E1D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6B8F3441C999DFF0085E1D4 /* Storyboard */,
+				B6936BA41C98994400684F78 /* GamesViewController.swift */,
+				B6936BA61C98994400684F78 /* SecondViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B6B8F33F1C999A040085E1D4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B6B8F3431C999BEE0085E1D4 /* Models */,
+				B6B8F3421C999BE30085E1D4 /* Network */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		B6B8F3421C999BE30085E1D4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B6B8F3401C999A1B0085E1D4 /* Router.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		B6B8F3431C999BEE0085E1D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B6B8F3441C999DFF0085E1D4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B6936BA81C98994400684F78 /* Main.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */,
 				B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */,
 				B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */,
-				B6936BA51C98994400684F78 /* FirstViewController.swift in Sources */,
+				B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
