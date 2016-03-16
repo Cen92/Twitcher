@@ -1,0 +1,6 @@
+framework module Pods_Twitcher {
+  umbrella header "Pods-Twitcher-umbrella.h"
+
+  export *
+  module * { export * }
+}
