@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40951C9AC0C900682F5C /* StreamGame.swift */; };
+		B63A40981C9AC1CD00682F5C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40971C9AC1CD00682F5C /* Game.swift */; };
+		B63A409A1C9AC25E00682F5C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40991C9AC25E00682F5C /* Box.swift */; };
 		B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA21C98994400684F78 /* AppDelegate.swift */; };
 		B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA41C98994400684F78 /* GamesViewController.swift */; };
 		B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA61C98994400684F78 /* SecondViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		69D0FE199A167E1E2B36D42C /* Pods-Twitcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitcher/Pods-Twitcher.debug.xcconfig"; sourceTree = "<group>"; };
+		B63A40951C9AC0C900682F5C /* StreamGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamGame.swift; sourceTree = "<group>"; };
+		B63A40971C9AC1CD00682F5C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B63A40991C9AC25E00682F5C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B6936B9F1C98994400684F78 /* Twitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6936BA21C98994400684F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6936BA41C98994400684F78 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 		B6B8F3431C999BEE0085E1D4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B63A40951C9AC0C900682F5C /* StreamGame.swift */,
+				B63A40971C9AC1CD00682F5C /* Game.swift */,
+				B63A40991C9AC25E00682F5C /* Box.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -253,6 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */,
+				B63A409A1C9AC25E00682F5C /* Box.swift in Sources */,
+				B63A40981C9AC1CD00682F5C /* Game.swift in Sources */,
+				B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */,
 				B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */,
 				B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */,
 				B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */,

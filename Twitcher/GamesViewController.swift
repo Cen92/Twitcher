@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class GamesViewController: UIViewController {
     
@@ -25,8 +26,11 @@ class GamesViewController: UIViewController {
 
 extension GamesViewController {
     private func fetchGames() {
-        Alamofire.request(Router.Games()).response { (_, response, data, error) -> Void in
-            
+        Alamofire.request(Router.Games()).responseData { (response) -> Void in
+            if let data = response.result.value {
+                let json = JSON(data: data)
+                print(json)
+            }
         }
     }
 }

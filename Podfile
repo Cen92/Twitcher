@@ -5,4 +5,5 @@ use_frameworks!
 
 target 'Twitcher' do
 pod 'Alamofire', '~> 3.0'
+pod ‘SwiftyJSON’
 end
