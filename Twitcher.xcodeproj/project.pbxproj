@@ -11,6 +11,7 @@
 		B63A40981C9AC1CD00682F5C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40971C9AC1CD00682F5C /* Game.swift */; };
 		B63A409A1C9AC25E00682F5C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40991C9AC25E00682F5C /* Box.swift */; };
 		B63A409C1C9AC7CF00682F5C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A409B1C9AC7CF00682F5C /* TestViewController.swift */; };
+		B661DAC21CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661DAC11CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift */; };
 		B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA21C98994400684F78 /* AppDelegate.swift */; };
 		B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA41C98994400684F78 /* GamesViewController.swift */; };
 		B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA61C98994400684F78 /* SecondViewController.swift */; };
@@ -26,6 +27,7 @@
 		B63A40971C9AC1CD00682F5C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B63A40991C9AC25E00682F5C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B63A409B1C9AC7CF00682F5C /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B661DAC11CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamGameCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6936B9F1C98994400684F78 /* Twitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6936BA21C98994400684F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6936BA41C98994400684F78 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B661DAC01CB30C9900DB37C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B661DAC11CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		B6936B961C98994400684F78 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 			children = (
 				B6B8F3441C999DFF0085E1D4 /* Storyboard */,
 				B6936BA41C98994400684F78 /* GamesViewController.swift */,
+				B661DAC01CB30C9900DB37C2 /* Cells */,
 				B63A409B1C9AC7CF00682F5C /* TestViewController.swift */,
 				B6936BA61C98994400684F78 /* SecondViewController.swift */,
 			);
@@ -178,6 +189,7 @@
 				TargetAttributes = {
 					B6936B9E1C98994400684F78 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = ST6334FFDX;
 					};
 				};
 			};
@@ -271,6 +283,7 @@
 				B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */,
 				B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */,
 				B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */,
+				B661DAC21CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift in Sources */,
 				B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,10 +389,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Twitcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.cbreathnach.Twitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -389,10 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Twitcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.cbreathnach.Twitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

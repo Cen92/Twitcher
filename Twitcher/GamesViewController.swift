@@ -49,7 +49,10 @@ extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier("StreamGameCollectionViewCell", forIndexPath: indexPath) as? StreamGameCollectionViewCell
+        let model = streamGames[indexPath.row]
+        cell!.setupWithContent(model)
+        return cell!
     }
 }
 

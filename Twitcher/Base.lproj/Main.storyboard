@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Games-->
@@ -19,20 +20,55 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zzp-r6-FeX">
                                 <rect key="frame" x="20" y="100" width="1880" height="880"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ss5-vh-kAk">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="574" height="430"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="KuZ-0d-Bb8">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StreamGameCollectionViewCell" id="KuZ-0d-Bb8" customClass="StreamGameCollectionViewCell" customModule="Twitcher" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="574" height="430"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="574" height="430"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ER2-Mz-Y0n">
+                                                    <rect key="frame" x="16" y="16" width="542" height="358"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter Strike: Global Offensive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GA0-s0-jed">
+                                                    <rect key="frame" x="16" y="385" width="542" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999,999 Viewers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQD-q4-s0h">
+                                                    <rect key="frame" x="16" y="409" width="542" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ER2-Mz-Y0n" secondAttribute="trailing" constant="8" id="26z-q9-Acv"/>
+                                            <constraint firstItem="zQD-q4-s0h" firstAttribute="top" secondItem="GA0-s0-jed" secondAttribute="bottom" constant="3" id="52w-Ox-xSL"/>
+                                            <constraint firstItem="GA0-s0-jed" firstAttribute="top" secondItem="ER2-Mz-Y0n" secondAttribute="bottom" constant="11" id="5l2-eH-ngO"/>
+                                            <constraint firstItem="zQD-q4-s0h" firstAttribute="leading" secondItem="GA0-s0-jed" secondAttribute="leading" id="Aqa-WA-gTe"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ER2-Mz-Y0n" secondAttribute="bottom" constant="48" id="DNF-5i-WIq"/>
+                                            <constraint firstItem="zQD-q4-s0h" firstAttribute="width" secondItem="GA0-s0-jed" secondAttribute="width" id="Glj-7A-Fb8"/>
+                                            <constraint firstItem="GA0-s0-jed" firstAttribute="width" secondItem="ER2-Mz-Y0n" secondAttribute="width" id="JNT-HK-MMZ"/>
+                                            <constraint firstItem="ER2-Mz-Y0n" firstAttribute="leading" secondItem="KuZ-0d-Bb8" secondAttribute="leadingMargin" constant="8" id="S4J-su-Ipg"/>
+                                            <constraint firstItem="GA0-s0-jed" firstAttribute="leading" secondItem="ER2-Mz-Y0n" secondAttribute="leading" id="eYQ-jF-x5c"/>
+                                            <constraint firstItem="ER2-Mz-Y0n" firstAttribute="top" secondItem="KuZ-0d-Bb8" secondAttribute="topMargin" constant="8" id="fyZ-wy-v9A"/>
+                                            <constraint firstItem="zQD-q4-s0h" firstAttribute="top" secondItem="GA0-s0-jed" secondAttribute="bottom" constant="3" id="zxL-Ug-iVn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="ER2-Mz-Y0n" id="px1-dz-Fby"/>
+                                            <outlet property="gameNameLabel" destination="GA0-s0-jed" id="Uaz-a3-HaC"/>
+                                            <outlet property="viewerCountLabel" destination="zQD-q4-s0h" id="Dcl-n3-iFy"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

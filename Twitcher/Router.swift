@@ -18,7 +18,6 @@ enum Router: URLRequestConvertible {
         switch self {
         case .Games():
             return .GET
-        
         case .OAuth(_,_):
             return .POST
         }
