@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StreamGame: NSObject, ResponseObject {
+class StreamGame: NSObject {
     var viewers:Int?
     var channels:Int?
     var game:Game?

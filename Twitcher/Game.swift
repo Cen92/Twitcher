@@ -16,7 +16,7 @@ class Game: NSObject {
     
     required init?(response: NSHTTPURLResponse, representation: AnyObject){
         self.name   = representation.valueForKeyPath("name") as? String
-        self.id  = representation.valueForKeyPath("id") as? Int
+        self.id  = representation.valueForKeyPath("_id") as? Int
         self.giantbomb_id  = representation.valueForKeyPath("giantbomb_id") as? Int
         
         if let boxRepresentation = representation.valueForKeyPath("box") as? [String:AnyObject] {

@@ -10,6 +10,7 @@
 		B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40951C9AC0C900682F5C /* StreamGame.swift */; };
 		B63A40981C9AC1CD00682F5C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40971C9AC1CD00682F5C /* Game.swift */; };
 		B63A409A1C9AC25E00682F5C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40991C9AC25E00682F5C /* Box.swift */; };
+		B63A409C1C9AC7CF00682F5C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A409B1C9AC7CF00682F5C /* TestViewController.swift */; };
 		B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA21C98994400684F78 /* AppDelegate.swift */; };
 		B6936BA51C98994400684F78 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA41C98994400684F78 /* GamesViewController.swift */; };
 		B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA61C98994400684F78 /* SecondViewController.swift */; };
@@ -24,6 +25,7 @@
 		B63A40951C9AC0C900682F5C /* StreamGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamGame.swift; sourceTree = "<group>"; };
 		B63A40971C9AC1CD00682F5C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B63A40991C9AC25E00682F5C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		B63A409B1C9AC7CF00682F5C /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B6936B9F1C98994400684F78 /* Twitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6936BA21C98994400684F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6936BA41C98994400684F78 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				B6B8F3441C999DFF0085E1D4 /* Storyboard */,
 				B6936BA41C98994400684F78 /* GamesViewController.swift */,
+				B63A409B1C9AC7CF00682F5C /* TestViewController.swift */,
 				B6936BA61C98994400684F78 /* SecondViewController.swift */,
 			);
 			name = Views;
@@ -263,6 +266,7 @@
 			files = (
 				B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */,
 				B63A409A1C9AC25E00682F5C /* Box.swift in Sources */,
+				B63A409C1C9AC7CF00682F5C /* TestViewController.swift in Sources */,
 				B63A40981C9AC1CD00682F5C /* Game.swift in Sources */,
 				B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */,
 				B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */,
