@@ -1,8 +1,8 @@
 //
-//  FirstViewController.swift
+//  GamesViewController.swift
 //  Twitcher
 //
-//  Created by Cen Breathnach on 15/03/2016.
+//  Created by Cen Breathnach on 05/04/2016.
 //  Copyright © 2016 Cen Breathnach. All rights reserved.
 //
 
@@ -11,48 +11,35 @@ import Alamofire
 
 class GamesViewController: UIViewController {
     
-    var streamGames = [StreamGame]()
-    
-    @IBOutlet weak var collectionView: UICollectionView!
+    var game:Game?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        fetchGames()
+        self.navigationItem.title = self.game?.name
+        self.fetchStreams()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-extension GamesViewController {
-    private func fetchGames() {
-        Alamofire.request(Router.Games()).responseJSON { (response) in
-            if let result = response.result.value as? [String:AnyObject] {
-                if let top = result["top"] as? [AnyObject] {
-                    for object in top {
-                        if let streamGame = StreamGame(response: response.response!, representation: object){
-                            self.streamGames.append(streamGame)
-                        }
-                        self.collectionView.reloadData()
-                    }
-                }
-            }
+    
+    func fetchStreams() {
+        if let game = self.game {
+            Alamofire.request(<#T##URLRequest: URLRequestConvertible##URLRequestConvertible#>)
         }
     }
-}
-
-extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.streamGames.count
-    }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier("StreamGameCollectionViewCell", forIndexPath: indexPath) as? StreamGameCollectionViewCell
-        let model = streamGames[indexPath.row]
-        cell!.setupWithContent(model)
-        return cell!
-    }
-}
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

@@ -21,10 +21,14 @@ class StreamGameCollectionViewCell: UICollectionViewCell {
         if let model = self.model {
             self.gameNameLabel.text = model.game?.name
             self.viewerCountLabel.text = "\(model.viewers!) viewers"
+            self.backgroundImage.userInteractionEnabled = true
+            self.backgroundImage.adjustsImageWhenAncestorFocused = true
             let url = NSURL(string: (model.game?.box?.medium)!)
+            
             Alamofire.request(NSURLRequest(URL: url!)).responseData({ (response) in
                 if let data = response.data {
                   self.backgroundImage.image = UIImage(data: data)
+                    self.backgroundImage.contentMode = .ScaleAspectFit
                 }
             })
         }
