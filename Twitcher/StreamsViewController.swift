@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 
-class GamesViewController: UIViewController {
+class StreamsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var game:Game?
+    var streams = [AnyObject]()
 
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = self.game?.name
@@ -27,8 +29,22 @@ class GamesViewController: UIViewController {
     
     func fetchStreams() {
         if let game = self.game {
-            Alamofire.request(<#T##URLRequest: URLRequestConvertible##URLRequestConvertible#>)
+            Alamofire.request(Router.Streams(game.name!)).responseJSON { (response) in
+                if let result = response.result.value as? [String:AnyObject] {
+                    let streams = Streams(response: response.response!, representation: result)
+                    self.collectionView.reloadData()
+                }
+            }
         }
+    }
+
+
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.streams.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
     
 

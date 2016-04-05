@@ -59,7 +59,7 @@ extension StreamGamesViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let model = self.streamGames[indexPath.row]
-        let viewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("GameViewController") as? GamesViewController
+        let viewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("StreamsViewController") as? StreamsViewController
         viewController?.game = model.game
         
         self.navigationController?.pushViewController(viewController!, animated: true)
