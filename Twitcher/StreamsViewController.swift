@@ -12,7 +12,7 @@ import Alamofire
 class StreamsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var game:Game?
-    var streams = [AnyObject]()
+    var streams = [Stream?]()
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -32,6 +32,11 @@ class StreamsViewController: UIViewController, UICollectionViewDelegate, UIColle
             Alamofire.request(Router.Streams(game.name!)).responseJSON { (response) in
                 if let result = response.result.value as? [String:AnyObject] {
                     let streams = Streams(response: response.response!, representation: result)
+					if let streams = streams?.streams {
+						for stream in streams {
+							self.streams.append(stream)
+						}
+					}
                     self.collectionView.reloadData()
                 }
             }
@@ -44,8 +49,15 @@ class StreamsViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("StreamCollectionViewCell", forIndexPath: indexPath)
+		return cell
     }
+	
+	func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+		if let cell  = cell as? StreamCollectionViewCell, model = self.streams[indexPath.row] {
+			cell.setup(model)
+		}
+	}
     
 
     /*

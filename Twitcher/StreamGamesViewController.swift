@@ -9,11 +9,11 @@
 import UIKit
 import Alamofire
 
-class StreamGamesViewController: UIViewController {
+class GamesViewController: UIViewController {
     
     var streamGames = [StreamGame]()
-    let originalCellSize = CGSizeMake(568, 328)
-    let focusCellSize = CGSizeMake(583, 343)
+    let originalCellSize = CGSizeMake(272, 380)
+    let focusCellSize = CGSizeMake(282, 390)
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class StreamGamesViewController: UIViewController {
     }
 }
 
-extension StreamGamesViewController {
+extension GamesViewController {
     private func fetchGames() {
         Alamofire.request(Router.Games()).responseJSON { (response) in
             if let result = response.result.value as? [String:AnyObject] {
@@ -45,7 +45,7 @@ extension StreamGamesViewController {
     }
 }
 
-extension StreamGamesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.streamGames.count
     }

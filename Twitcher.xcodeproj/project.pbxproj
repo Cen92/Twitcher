@@ -21,6 +21,7 @@
 		B6936BAA1C98994400684F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6936BA81C98994400684F78 /* Main.storyboard */; };
 		B6936BAC1C98994400684F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6936BAB1C98994400684F78 /* Assets.xcassets */; };
 		B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8F3401C999A1B0085E1D4 /* Router.swift */; };
+		B6CB98F11CE0BE2700415C56 /* StreamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CB98F01CE0BE2700415C56 /* StreamCollectionViewCell.swift */; };
 		B6EC0BDB1CB3EA8C00283CFD /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC0BDA1CB3EA8C00283CFD /* StreamsViewController.swift */; };
 		DC67973D09A98DE9BE5C8BBC /* Pods_Twitcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B19B39EE11DB7DB2F3117F /* Pods_Twitcher.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		B6936BAB1C98994400684F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6936BAD1C98994400684F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6B8F3401C999A1B0085E1D4 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B6CB98F01CE0BE2700415C56 /* StreamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6EC0BDA1CB3EA8C00283CFD /* StreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamsViewController.swift; sourceTree = "<group>"; };
 		F4F7769F139579AAE19FA176 /* Pods-Twitcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitcher/Pods-Twitcher.release.xcconfig"; sourceTree = "<group>"; };
 		F8B19B39EE11DB7DB2F3117F /* Pods_Twitcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B661DAC11CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift */,
+				B6CB98F01CE0BE2700415C56 /* StreamCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */,
 				B661DAC21CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift in Sources */,
 				B6936BA51C98994400684F78 /* StreamGamesViewController.swift in Sources */,
+				B6CB98F11CE0BE2700415C56 /* StreamCollectionViewCell.swift in Sources */,
 				B6935EAF1CB460C300D5E846 /* Streams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
