@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1961206AE1D70A64AD9690AA870F2A8C43CC51C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1961206AE1D70A64AD9690AA870F2A8C43CC51C7" : 0,
+    "BA3045FF966F83A4B5F0896ABC42C3F6B7BF5DE9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9B872D0A-9241-4E61-A2DC-5D7076C079C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1961206AE1D70A64AD9690AA870F2A8C43CC51C7" : "Twitcher\/",
+    "BA3045FF966F83A4B5F0896ABC42C3F6B7BF5DE9" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Twitcher",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Twitcher.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Cen92\/Twitcher.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1961206AE1D70A64AD9690AA870F2A8C43CC51C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:donedealireland\/DoneDeal-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA3045FF966F83A4B5F0896ABC42C3F6B7BF5DE9"
+    }
+  ]
+}

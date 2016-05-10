@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '33787AA0B3B17D9AF707147E'
+               BlueprintIdentifier = 'BE597AFF0528256D6875F6A1'
                BlueprintName = 'Pods-Twitcher'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Twitcher.framework'>
