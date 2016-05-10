@@ -38,6 +38,8 @@ class StreamCollectionViewCell: UICollectionViewCell {
 					if let data = response.data {
 						self.streamImage.image = UIImage(data: data)
 						self.streamImage.contentMode = .ScaleAspectFit
+						self.streamImage.userInteractionEnabled = true
+						self.streamImage.adjustsImageWhenAncestorFocused = true
 					}
 				})
 			}

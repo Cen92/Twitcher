@@ -11,6 +11,7 @@
 		B63A40981C9AC1CD00682F5C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40971C9AC1CD00682F5C /* Game.swift */; };
 		B63A409A1C9AC25E00682F5C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A40991C9AC25E00682F5C /* Box.swift */; };
 		B661DAC21CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B661DAC11CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift */; };
+		B673F7FC1CE20B5B00AD76E6 /* StreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673F7FB1CE20B5B00AD76E6 /* StreamViewController.swift */; };
 		B6935EAF1CB460C300D5E846 /* Streams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6935EAE1CB460C300D5E846 /* Streams.swift */; };
 		B6935EB11CB460FB00D5E846 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6935EB01CB460FB00D5E846 /* Stream.swift */; };
 		B6935EB31CB461CE00D5E846 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6935EB21CB461CE00D5E846 /* Channel.swift */; };
@@ -32,6 +33,7 @@
 		B63A40971C9AC1CD00682F5C /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B63A40991C9AC25E00682F5C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		B661DAC11CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		B673F7FB1CE20B5B00AD76E6 /* StreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamViewController.swift; sourceTree = "<group>"; };
 		B6935EAE1CB460C300D5E846 /* Streams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streams.swift; sourceTree = "<group>"; };
 		B6935EB01CB460FB00D5E846 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		B6935EB21CB461CE00D5E846 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				B6936BA41C98994400684F78 /* StreamGamesViewController.swift */,
 				B6EC0BDA1CB3EA8C00283CFD /* StreamsViewController.swift */,
+				B673F7FB1CE20B5B00AD76E6 /* StreamViewController.swift */,
 				B6B8F3441C999DFF0085E1D4 /* Storyboard */,
 				B661DAC01CB30C9900DB37C2 /* Cells */,
 				B6936BA61C98994400684F78 /* SecondViewController.swift */,
@@ -312,6 +315,7 @@
 				B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */,
 				B63A409A1C9AC25E00682F5C /* Box.swift in Sources */,
 				B63A40981C9AC1CD00682F5C /* Game.swift in Sources */,
+				B673F7FC1CE20B5B00AD76E6 /* StreamViewController.swift in Sources */,
 				B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */,
 				B6EC0BDB1CB3EA8C00283CFD /* StreamsViewController.swift in Sources */,
 				B6935EB51CB462D400D5E846 /* Preview.swift in Sources */,

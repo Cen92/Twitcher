@@ -13,6 +13,9 @@ class StreamsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var game:Game?
     var streams = [Stream?]()
+	
+	let originalCellSize = CGSizeMake(546, 337)
+	let focusCellSize = CGSizeMake(600, 429)
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -43,7 +46,11 @@ class StreamsViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
 
-
+	func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+		self.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.None)
+		self.performSegueWithIdentifier("SegueToStreamViewController", sender: nil)
+	}
+	
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.streams.count
     }
@@ -58,16 +65,33 @@ class StreamsViewController: UIViewController, UICollectionViewDelegate, UIColle
 			cell.setup(model)
 		}
 	}
-    
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "SegueToStreamViewController" {
+			if let streamViewController = segue.destinationViewController as? StreamViewController {
+				if let indexPath = self.collectionView.indexPathsForSelectedItems()?.first {
+					streamViewController.stream = self.streams[indexPath.row]
+				}
+			}
+		}
+	}
+	
+	func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+		return true
+	}
+	
+	func collectionView(collectionView: UICollectionView, didUpdateFocusInContext context: UICollectionViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+		if let previousItem = context.previouslyFocusedView as? StreamCollectionViewCell {
+			UIView.animateWithDuration(0.2, animations: { () -> Void in
+				previousItem.streamImage.frame.size = self.originalCellSize
+			})
+		}
+		if let nextItem = context.nextFocusedView as? StreamCollectionViewCell {
+			UIView.animateWithDuration(0.2, animations: { () -> Void in
+				nextItem.streamImage.frame.size = self.focusCellSize
+			})
+		}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	}
+	
 }

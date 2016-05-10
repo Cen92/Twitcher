@@ -9,11 +9,12 @@ import UIKit
 import Alamofire
 
 enum Router: URLRequestConvertible {
-    static let baseURLString = "https://api.twitch.tv/kraken"
+    static let baseURLString = "https://api.twitch.tv/"
     static let clientId = "ewk5nxq5c9jwk0fle8914ydpphif8sz"
     case OAuth(String, String)
     case Games()
     case Streams(String)
+	case StreamToken(String)
     
     var method: Alamofire.Method {
         switch self {
@@ -21,6 +22,8 @@ enum Router: URLRequestConvertible {
             return .GET
         case.Streams(_):
             return .GET
+		case .StreamToken(_):
+			return .GET
         case .OAuth(_,_):
             return .POST
         }
@@ -29,11 +32,13 @@ enum Router: URLRequestConvertible {
     var path: String {
         switch self  {
         case .Games():
-            return "/games/top/"
+            return "kraken/games/top/"
         case .Streams(_):
-            return "/streams"
+            return "kraken/streams"
+		case .StreamToken(let string):
+			return "/api/channels/\(string)/access_token"
         case .OAuth(_,_):
-            return "/oauth2/token"
+            return "kraken/oauth2/token"
         }
     }
     
@@ -48,10 +53,10 @@ enum Router: URLRequestConvertible {
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: nil).0
         case .Streams(let gameName):
             return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: ["game":gameName]).0
+		case .StreamToken(_):
+			return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: nil).0
         case .OAuth(let params):
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: ["client_id":Router.clientId,"username":params.0, "password":params.1]).0
-        default:
-            return mutableURLRequest
         }
     }
 }
