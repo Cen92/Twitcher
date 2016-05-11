@@ -228,29 +228,20 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="akv-bP-k9C" id="6dy-8Z-JZA"/>
-                        <segue destination="egF-9d-prm" kind="show" identifier="SegueToStreamViewController" id="nbI-6y-EIR"/>
+                        <segue destination="cEx-0o-j4F" kind="show" identifier="SegueToStreamViewController" id="Wxc-UF-IAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUV-MK-t7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6471" y="-640"/>
         </scene>
-        <!--Stream View Controller-->
-        <scene sceneID="2fW-pC-7do">
+        <!--AV Player View Controller-->
+        <scene sceneID="VXo-lc-hkt">
             <objects>
-                <viewController id="egF-9d-prm" customClass="StreamViewController" customModule="Twitcher" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RZg-Rz-BEo"/>
-                        <viewControllerLayoutGuide type="bottom" id="qRZ-Eb-oj1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VyH-fg-lZH">
-                        <rect key="frame" x="0.0" y="145" width="1920" height="935"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sLg-bj-V9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="cEx-0o-j4F" customClass="StreamViewController" customModule="Twitcher" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rlt-V3-j4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8736" y="-640"/>
+            <point key="canvasLocation" x="8699" y="-826"/>
         </scene>
         <!--Games-->
         <scene sceneID="IQy-6Q-vun">

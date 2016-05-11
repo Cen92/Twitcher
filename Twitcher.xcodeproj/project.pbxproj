@@ -21,6 +21,10 @@
 		B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6936BA61C98994400684F78 /* SecondViewController.swift */; };
 		B6936BAA1C98994400684F78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6936BA81C98994400684F78 /* Main.storyboard */; };
 		B6936BAC1C98994400684F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6936BAB1C98994400684F78 /* Assets.xcassets */; };
+		B6AD0C2F1CE3D3A60053E5CA /* M3U8Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD0C2E1CE3D3A60053E5CA /* M3U8Parser.swift */; };
+		B6AD0C311CE3D8460053E5CA /* TwitchStreamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AD0C301CE3D8460053E5CA /* TwitchStreamInfo.swift */; };
+		B6AD0C331CE3DB290053E5CA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AD0C321CE3DB290053E5CA /* AVKit.framework */; };
+		B6AD0C351CE3DB590053E5CA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AD0C341CE3DB590053E5CA /* AVFoundation.framework */; };
 		B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8F3401C999A1B0085E1D4 /* Router.swift */; };
 		B6CB98F11CE0BE2700415C56 /* StreamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CB98F01CE0BE2700415C56 /* StreamCollectionViewCell.swift */; };
 		B6EC0BDB1CB3EA8C00283CFD /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EC0BDA1CB3EA8C00283CFD /* StreamsViewController.swift */; };
@@ -45,6 +49,10 @@
 		B6936BA91C98994400684F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6936BAB1C98994400684F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6936BAD1C98994400684F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6AD0C2E1CE3D3A60053E5CA /* M3U8Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M3U8Parser.swift; sourceTree = "<group>"; };
+		B6AD0C301CE3D8460053E5CA /* TwitchStreamInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchStreamInfo.swift; sourceTree = "<group>"; };
+		B6AD0C321CE3DB290053E5CA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		B6AD0C341CE3DB590053E5CA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B6B8F3401C999A1B0085E1D4 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B6CB98F01CE0BE2700415C56 /* StreamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6EC0BDA1CB3EA8C00283CFD /* StreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamsViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AD0C351CE3DB590053E5CA /* AVFoundation.framework in Frameworks */,
+				B6AD0C331CE3DB290053E5CA /* AVKit.framework in Frameworks */,
 				DC67973D09A98DE9BE5C8BBC /* Pods_Twitcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +77,8 @@
 		51EF1FBCE2E828ECB68135B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6AD0C341CE3DB590053E5CA /* AVFoundation.framework */,
+				B6AD0C321CE3DB290053E5CA /* AVKit.framework */,
 				F8B19B39EE11DB7DB2F3117F /* Pods_Twitcher.framework */,
 			);
 			name = Frameworks;
@@ -79,6 +91,14 @@
 				F4F7769F139579AAE19FA176 /* Pods-Twitcher.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B601CA871CE360D70036AE3B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B6AD0C2E1CE3D3A60053E5CA /* M3U8Parser.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		B661DAC01CB30C9900DB37C2 /* Cells */ = {
@@ -103,6 +123,7 @@
 		B6935EAD1CB45D1000D5E846 /* Streams */ = {
 			isa = PBXGroup;
 			children = (
+				B6AD0C301CE3D8460053E5CA /* TwitchStreamInfo.swift */,
 				B6935EAE1CB460C300D5E846 /* Streams.swift */,
 				B6935EB01CB460FB00D5E846 /* Stream.swift */,
 				B6935EB21CB461CE00D5E846 /* Channel.swift */,
@@ -135,6 +156,7 @@
 				B6936BA21C98994400684F78 /* AppDelegate.swift */,
 				B6B8F33E1C9999F20085E1D4 /* Views */,
 				B6B8F33F1C999A040085E1D4 /* Data */,
+				B601CA871CE360D70036AE3B /* Helpers */,
 				B6936BAB1C98994400684F78 /* Assets.xcassets */,
 				B6936BAD1C98994400684F78 /* Info.plist */,
 			);
@@ -217,7 +239,7 @@
 		B6936B971C98994400684F78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Cen Breathnach";
 				TargetAttributes = {
@@ -315,11 +337,13 @@
 				B6B8F3411C999A1B0085E1D4 /* Router.swift in Sources */,
 				B63A409A1C9AC25E00682F5C /* Box.swift in Sources */,
 				B63A40981C9AC1CD00682F5C /* Game.swift in Sources */,
+				B6AD0C2F1CE3D3A60053E5CA /* M3U8Parser.swift in Sources */,
 				B673F7FC1CE20B5B00AD76E6 /* StreamViewController.swift in Sources */,
 				B63A40961C9AC0C900682F5C /* StreamGame.swift in Sources */,
 				B6EC0BDB1CB3EA8C00283CFD /* StreamsViewController.swift in Sources */,
 				B6935EB51CB462D400D5E846 /* Preview.swift in Sources */,
 				B6936BA71C98994400684F78 /* SecondViewController.swift in Sources */,
+				B6AD0C311CE3D8460053E5CA /* TwitchStreamInfo.swift in Sources */,
 				B6936BA31C98994400684F78 /* AppDelegate.swift in Sources */,
 				B661DAC21CB30CBA00DB37C2 /* StreamGameCollectionViewCell.swift in Sources */,
 				B6936BA51C98994400684F78 /* StreamGamesViewController.swift in Sources */,
@@ -429,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Twitcher/Info.plist;
@@ -436,6 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ie.cbreathnach.Twitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -445,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Twitcher/Info.plist;

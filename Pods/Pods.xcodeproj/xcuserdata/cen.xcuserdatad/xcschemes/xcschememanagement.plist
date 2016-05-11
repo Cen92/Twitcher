@@ -8,31 +8,25 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-Twitcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>55A0214E381DEFF47884B0B779317C4D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C99E99CCD285A2599A467FCBC1220D3F</key>
+		<key>B59ED307F0A475DCC3563984ED238D59</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVKit
 import Alamofire
 
-class StreamViewController: UIViewController {
+class StreamViewController: AVPlayerViewController {
 	var stream:Stream?
 	var accessTokenDict: [String:AnyObject]?
+	var streamURLs = [TwitchStreamInfo]()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,15 @@ class StreamViewController: UIViewController {
 		fetchAccessToken { (success) in
 			if success {
 				if let accessTokenDict = self.accessTokenDict {
-					self.fetchStream(accessTokenDict)
+					self.fetchStream(accessTokenDict, completion: { (results) in
+						if let results = results {
+							self.streamURLs = results
+							self.playStream()
+						}
+					})
 				}
 			}
 		}
-		
 	}
 	
 	func fetchAccessToken(completion:(success:Bool) -> Void) {
@@ -46,7 +52,7 @@ class StreamViewController: UIViewController {
 		}
 	}
 	
-	func fetchStream(accessToken:[String:AnyObject]) {
+	func fetchStream(accessToken:[String:AnyObject], completion:(results:[TwitchStreamInfo]?) -> Void){
 		if let stream = self.stream, channel = stream.channel, channelName = channel.name {
 			if let sig = accessToken["sig"] as? String, token = accessToken["token"] {
 				Alamofire.request(Router.Stream(channelName, [
@@ -59,8 +65,10 @@ class StreamViewController: UIViewController {
 					"p":Int(arc4random_uniform(999999))])).responseString(completionHandler: { (response:Response<String, NSError>) in
 						switch response.result {
 						case .Success(let value):
-							print(value)
+							let streamURLs = M3U8Parser.M3U8ToStreamInfo(value)
+							completion(results: streamURLs)
 						case .Failure(let error):
+							completion(results: nil)
 							print(error)
 						}
 					})
@@ -69,5 +77,13 @@ class StreamViewController: UIViewController {
 		}
 	}
 	
+	func playStream() {
+		if let stream = self.streamURLs.first {
+			let asset = AVURLAsset(URL:stream.url)
+			let streamItem = AVPlayerItem(asset: asset)
+			player = AVPlayer(playerItem: streamItem)
+			player!.play()
+		}
+	}
 	
 }
